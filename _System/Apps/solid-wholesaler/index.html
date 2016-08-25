@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Solid Wholesalers</title>
+<link href="_assets/css/app.css" type="text/css" rel="stylesheet" media="screen" />
+<script type="text/javascript" src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.3.1/jquery.cookie.min.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.1/underscore-min.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/backbone.js/1.0.0/backbone-min.js"></script>
+<script type="text/javascript" src="//cdn.worldsecuresystems.com/bcapi/bcapi-0.1.0.min.js"></script>
+<script type="text/javascript" src="_assets/js/app.js"></script>
+</head>
+
+<body class="tab-index">
+{% include "/_System/apps/solid-wholesaler/_assets/app/tabs.inc" %}
+<div id="container-body">
+  <h1><span>Contacts</span></h1>
+  <div class="RadGrid RadGrid_Default">
+  <p>
+<label>Filter by Contact Type: </label>
+  <select class="customerTypeSelect">
+   <option value="">All Contacts</option>
+  </select>
+  </p>
+  <div class="footerbuttons" id="bulkActions">Bulk Actions on Selected Customers: <a class="basic-button small-button addWholesaler" href="#">Make Wholesaler</a><a class="basic-button small-button removeWholesaler" href="#">Not a Wholesaler</a>
+            </div>
+    <table class="rgMasterTable tablesorter" id="myTable" cellpadding="0" cellspacing="0" width="760">
+      <!-- Table header -->
+      <thead>
+      <tr>
+      	  <th class="rgHeader" style="width: 10px;"><a href="#"></a><input type='checkbox' name='selectAll' class='selectAll' value=''></th>
+          <th class="rgHeader"><a href="#">Full Name</a></th>
+          <th class="rgHeader"><a href="#">CRM ID</a></th>
+          <th class="rgHeader"><a href="#">Wholesaler</a></th>
+        </tr>
+      </thead>
+      <tbody class="itemList">
+      </tbody>
+      <tfoot>
+		<tr class="rgPager">
+			<td colspan="4"><table cellspacing="0" border="0" style="width:100%;">
+				<tbody><tr>
+					<td class="rgPagerCell">
+					
+							</tbody></table>
+				<div class="rgWrap rgInfoPart">
+						    Displaying page 1 of 7, items 1 to 20 of 140 
+					</div></td>
+				</tr>
+			</tbody></table></td>
+		</tr>
+	</tfoot>
+    </table>
+    <div class="footerbuttons" id="bulkActions">Bulk Actions on Selected Customers: <a class="basic-button small-button addWholesaler" href="#">Make Wholesaler</a><a class="basic-button small-button removeWholesaler" href="#">Not a Wholesaler</a>
+            </div>
+  </div>
+  <div class="updatingMessage" style="display:none">We are working hard to apply the changes you made. Give this a minute.</div>
+</div>
+</body>
+</html>
