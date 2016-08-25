@@ -24,9 +24,12 @@
   </p>
   <div class="footerbuttons" id="bulkActions">Bulk Actions on Selected Customers: <a class="basic-button small-button addWholesaler" href="#">Make Wholesaler</a><a class="basic-button small-button removeWholesaler" href="#">Not a Wholesaler</a>
             </div>
+            
     <table class="rgMasterTable tablesorter" id="myTable" cellpadding="0" cellspacing="0" width="760">
       <!-- Table header -->
+      
       <thead>
+      
       <tr>
       	  <th class="rgHeader" style="width: 10px;"><a href="#"></a><input type='checkbox' name='selectAll' class='selectAll' value=''></th>
           <th class="rgHeader"><a href="#">Full Name</a></th>
@@ -38,14 +41,15 @@
       </tbody>
       <tfoot>
 		<tr class="rgPager">
-			<td colspan="4"><table cellspacing="0" border="0" style="width:100%;">
-				<tbody><tr>
+			<td colspan="4" class="paginationRow">
+            <table cellspacing="0" border="0" style="width:100%;">
+				<tbody>
+                <tr>
 					<td class="rgPagerCell">
-					
-							</tbody></table>
-				<div class="rgWrap rgInfoPart">
-						    Displaying page 1 of 7, items 1 to 20 of 140 
-					</div></td>
+					</td>
+                    <td>
+                    <div class="rgWrap rgInfoPart">Displaying page 1 of 7, items 1 to 20 of 140 </div>
+                    </td>
 				</tr>
 			</tbody></table></td>
 		</tr>

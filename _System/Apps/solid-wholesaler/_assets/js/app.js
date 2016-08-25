@@ -2,6 +2,7 @@
 var _appKey = "solid-wholesaler";
 var _mainAppFolderLoc = '/_System/apps/'+_appKey+'/';
 var _mainAppFolder = new BCAPI.Models.FileSystem.Folder(_mainAppFolderLoc); 
+var currentPage = 1;
 $(document).ready(function(){
 	 
 // tabs	
@@ -24,7 +25,7 @@ $(function(){
 		  $('.pagination').click(function() {
 				 $(".itemList").html("");
 				 var numToSkip = (parseInt($(this).text())-1)*500+1;
-				 getCustomers("",numToSkip);
+				 getCustomers($(".customerTypeSelect").val(),numToSkip);
 			 })
 	});
 	 
@@ -39,7 +40,8 @@ $(function(){
 	 
 	 $(".customerTypeSelect").change(function() {
 		  $(".itemList").html("");
-		  getCustomers($(".customerTypeSelect").val())
+		  var numToSkip = 0;
+		  getCustomers($(".customerTypeSelect").val(),numToSkip)
 		});
 	$('.selectAll').click(function() {
 	  var checkedStatus = this.checked;
@@ -122,7 +124,7 @@ var request = $.ajax({
 		
 		customers_request.done(function (msg) {
 			var numPages = Math.ceil(msg.totalItemsCount/500);
-			var currentPage = 1;
+			currentPage = 1;
 			if (skip) currentPage = Math.ceil(skip/500);
 			$('.rgInfoPart').html("Displaying Page "+currentPage+" of "+numPages+" | Total Contacts: "+msg.totalItemsCount);
 			$('.rgPagerCell').html("");

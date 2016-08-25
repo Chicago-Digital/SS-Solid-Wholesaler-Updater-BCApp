@@ -337,7 +337,6 @@ a.basic-button {
     background: #eee;
 }
 .RadGrid_Default .rgPager .rgPagerCell {
-    border-top: 1px solid #d9d9d9;
     padding: 3px 0 2px;
 }
 .RadGrid .rgWrap {
@@ -374,8 +373,10 @@ a.basic-button {
     vertical-align: top;
 }
 .RadGrid_Default .rgPager .rgPagerCell {
+    padding: 4px 10px 2px;
+}
+.RadGrid_Default .paginationRow {
     border-top: 1px solid #d9d9d9;
-    padding: 3px 0 2px;
 }
 .RadGrid .rgInfoPart {
     float: right;
@@ -390,4 +391,8 @@ a.basic-button {
     float: right;
     font-size: 10px;
     color: #8a8a8a;
+}
+.rgPagerCell a{
+	padding-right: 6px;
+	font-size: 12px;
 }
