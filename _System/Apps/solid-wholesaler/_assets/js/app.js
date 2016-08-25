@@ -67,9 +67,8 @@ var request = $.ajax({
 	});
 
 	function updateCustomers(isWholesaler){
-		numCustomerstoUpdate = $('.action :checked').length;
+		numCustomerstoUpdate = $('.action :checked').length; 
 		$('.action :checked').each(function(i) {
-			
 			currentCustomerID = $(this).val();
        		var request = $.ajax({
 			url: "/webresources/api/v3/sites/current/customers/"+currentCustomerID,
@@ -95,7 +94,8 @@ var request = $.ajax({
 				{
 					$(".updatingMessage").hide();
 			  		$(".RadGrid_Default").show();
-					setTimeout(getCustomers(), 2000);
+					var numToSkip = (parseInt(currentPage)-1)*500+1;
+					setTimeout(getCustomers($(".customerTypeSelect").val(),numToSkip), 2000);
 				}
 			})
 			request.fail(function(jqXHR) {

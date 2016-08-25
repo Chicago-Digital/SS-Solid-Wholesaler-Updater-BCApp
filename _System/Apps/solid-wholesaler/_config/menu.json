@@ -7,7 +7,7 @@
     "menu-solid-wholesaler": {
         "parent": "menu-bcas-apps",
         "weight": 25000,
-        "title": "Solid Wholesaler",
+        "title": "Solid Wholesaler Updater",
         "attr": {
             "href": "/Admin/AppLoader.aspx?client_id=solid-wholesaler"
         }
