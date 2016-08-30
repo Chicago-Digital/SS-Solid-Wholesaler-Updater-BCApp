@@ -1,0 +1,17 @@
+{
+  "AddOrUpdate": [
+    "/_System/Apps/solid-wholesaler/index.html",
+	"/_System/Apps/solid-wholesaler/instructions.html",
+	"/_System/Apps/solid-wholesaler/_assets/app/tabs.inc",
+	"/_System/Apps/solid-wholesaler/_assets/css/app.css",
+	"/_System/Apps/solid-wholesaler/_assets/js/app.js",
+	"/_System/Apps/solid-wholesaler/_config/icon.png",
+	"/_System/Apps/solid-wholesaler/_config/menu.json",
+	"/_System/Apps/solid-wholesaler/_notes/dwsync.xml"
+  ],
+  "DoNothing": [
+  ],
+  "DeleteFile": [
+  ],
+  "DeleteFolder": []
+}
